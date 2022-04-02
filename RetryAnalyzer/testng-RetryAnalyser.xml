@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" verbose="5" parallel="classes"
+	thread-count="2">
+	<listeners>
+		<listener class-name="week6.day2.RetryAnalyser.RetryListener"></listener>
+	</listeners>
+	<!-- <groups> <run> <include name="smoke"></include> <include name="regression"></include> 
+		<include name="functional"></include> </run> </groups> -->
+	<parameter name="URL"
+		value="http://leaftaps.com/opentaps/control/login"></parameter>
+	<parameter name="BROWSER" value="chrome"></parameter>
+	<test name="CreateLeadTest">
+		<classes>
+			<class name="week6.day2.RetryAnalyser.CreateLead" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="EditLeadTest">
+		<classes>
+			<class name="week6.day2.RetryAnalyser.EditLead" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="DeleteLeadTest">
+		<classes>
+			<class name="week6.day2.RetryAnalyser.DeleteLead" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="DuplicateLeadTest">
+		<classes>
+			<class name="week6.day2.RetryAnalyser.DuplicateLead" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="MergeLeadTest">
+		<classes>
+			<class name="week6.day2.RetryAnalyser.MergeLead" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
